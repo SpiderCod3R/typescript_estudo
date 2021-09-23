@@ -23,8 +23,9 @@ var Carro = /** @class */ (function () {
     return Carro;
 }());
 var Concessionaria = /** @class */ (function () {
-    function Concessionaria(endereco) {
+    function Concessionaria(endereco, lista_de_carros) {
         this.endereco = endereco;
+        this.listaDeCarros = lista_de_carros;
     }
     Concessionaria.prototype.fornecerEndereco = function () {
         return this.endereco;
@@ -53,6 +54,15 @@ var Pessoa = /** @class */ (function () {
     };
     return Pessoa;
 }());
-var concessionaria = new Concessionaria('Rua Antunieta Fernandes, 76');
+//--- SPECS  ---//
+//***Objetos do tipo Carros */
 var carroA = new Carro('Nissan', 'GTR 35 Premium', 4, 769109);
+var carroB = new Carro('Chevrolet', 'Camaro', 4, 85109);
+var carroC = new Carro('Porche', 'Cayman', 2, 91109);
+var carroD = new Carro('Dodge', 'Charge', 2, 115109);
+var carroE = new Carro('Lamborguini', 'Diablo SV', 2, 225109);
+//***Lista de  Carros */
+var listaDeCarros = [carroA, carroB, carroC, carroD, carroE];
 var pessoa = new Pessoa('Alexandre Sampaio', carroA.to_string());
+var concessionaria = new Concessionaria('Av. Paulista', listaDeCarros);
+console.log(concessionaria.mostrarListaDeCarros());
