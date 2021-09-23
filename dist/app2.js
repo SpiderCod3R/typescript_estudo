@@ -19,11 +19,18 @@ var Carro = /** @class */ (function () {
     };
     return Carro;
 }());
+var Concessionaria = /** @class */ (function () {
+    function Concessionaria(endereco) {
+        this.endereco = endereco;
+    }
+    Concessionaria.prototype.fornecerEndereco = function () {
+        return this.endereco;
+    };
+    Concessionaria.prototype.mostrarListaDeCarros = function () {
+        return this.listaDeCarros;
+    };
+    return Concessionaria;
+}());
+var concessionaria = new Concessionaria('Rua Antunieta Fernandes, 76');
 var carroA = new Carro('Nissan', 'GTR 35 Premium', 4, 769109);
-console.log(carroA);
-carroA.acelerar();
-carroA.acelerar();
-carroA.acelerar();
-carroA.acelerar();
-carroA.acelerar();
-console.log(carroA);
+console.log(concessionaria);
