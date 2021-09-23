@@ -17,6 +17,9 @@ var Carro = /** @class */ (function () {
     Carro.prototype.velocidadeAtual = function () {
         return this.velocidade;
     };
+    Carro.prototype.to_string = function () {
+        return this.marca + ' ' + this.modelo;
+    };
     return Carro;
 }());
 var Concessionaria = /** @class */ (function () {
@@ -31,6 +34,25 @@ var Concessionaria = /** @class */ (function () {
     };
     return Concessionaria;
 }());
+var Pessoa = /** @class */ (function () {
+    function Pessoa(nome, carroPreferido) {
+        this.nome = nome;
+        this.carroPreferido = carroPreferido;
+    }
+    Pessoa.prototype.dizerNome = function () {
+        return this.nome;
+    };
+    Pessoa.prototype.dizerCarroPreferido = function () {
+        return this.carroPreferido;
+    };
+    Pessoa.prototype.comprarCarro = function (carro) {
+        this.carro = carro;
+    };
+    Pessoa.prototype.dizerCarroQueTem = function () {
+        return this.carro;
+    };
+    return Pessoa;
+}());
 var concessionaria = new Concessionaria('Rua Antunieta Fernandes, 76');
 var carroA = new Carro('Nissan', 'GTR 35 Premium', 4, 769109);
-console.log(concessionaria);
+var pessoa = new Pessoa('Alexandre Sampaio', carroA.to_string());
