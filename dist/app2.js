@@ -61,8 +61,14 @@ var carroB = new Carro('Chevrolet', 'Camaro', 4, 85109);
 var carroC = new Carro('Porche', 'Cayman', 2, 91109);
 var carroD = new Carro('Dodge', 'Charge', 2, 115109);
 var carroE = new Carro('Lamborguini', 'Diablo SV', 2, 225109);
-//***Lista de  Carros */
 var listaDeCarros = [carroA, carroB, carroC, carroD, carroE];
-var pessoa = new Pessoa('Alexandre Sampaio', carroA.to_string());
 var concessionaria = new Concessionaria('Av. Paulista', listaDeCarros);
-console.log(concessionaria.mostrarListaDeCarros());
+//***Comprar o Carros
+var cliente = new Pessoa('Alexandre Sampaio', 'GTR 35 Premium');
+concessionaria.mostrarListaDeCarros().map(function (carro) {
+    if (carro['modelo'] == cliente.dizerCarroPreferido()) {
+        // Compra o Carro
+        cliente.comprarCarro(carro);
+    }
+});
+console.log(cliente);
