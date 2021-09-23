@@ -49,7 +49,7 @@ class Concessionaria {
 
 class Pessoa {
   private nome: string
-  private carro: any
+  private carro: Carro
   private carroPreferido: string
 
   constructor(nome: string, carroPreferido: string) {
@@ -65,11 +65,11 @@ class Pessoa {
     return this.carroPreferido
   }
 
-  public comprarCarro(carro: any): void {
+  public comprarCarro(carro: Carro): void {
     this.carro = carro
   }
 
-  public dizerCarroQueTem(): any {
+  public dizerCarroQueTem(): Carro {
     return this.carro
   }
 }
@@ -83,10 +83,18 @@ let carroC = new Carro('Porche', 'Cayman', 2, 91_109)
 let carroD = new Carro('Dodge', 'Charge', 2, 115_109)
 let carroE = new Carro('Lamborguini', 'Diablo SV', 2, 225_109)
 
-//***Lista de  Carros */
 let listaDeCarros: Carro[] = [carroA, carroB, carroC, carroD, carroE]
 
-let pessoa = new Pessoa('Alexandre Sampaio', carroA.to_string())
 let concessionaria = new Concessionaria('Av. Paulista', listaDeCarros)
 
-console.log(concessionaria.mostrarListaDeCarros())
+//***Comprar o Carros
+let cliente = new Pessoa('Alexandre Sampaio', 'GTR 35 Premium')
+
+concessionaria.mostrarListaDeCarros().map((carro: Carro)=> {
+  if (carro['modelo'] == cliente.dizerCarroPreferido()) {
+    // Compra o Carro
+    cliente.comprarCarro(carro)
+  }
+})
+
+console.log(cliente)
