@@ -1,2 +1,2 @@
-let ola = (nome: string) => console.log("Hello " + nome)
-ola("Alexandre")
+let ola = (nome: string, sobrenome: string) => console.log("Hello " + nome + sobrenome)
+ola("Alexandre", "Sampaio")
