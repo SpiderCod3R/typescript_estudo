@@ -2,8 +2,8 @@ import Pessoa from "./pessoa";
 import Carro from "./carro"
 
 export default class Cliente extends Pessoa {
-  protected carro: Carro
-  protected carroPreferido: string
+  private carro!: Carro
+  private carroPreferido: string
 
   constructor(nome:string, telefone: string, carroPreferido: string) {
     super(nome, telefone)

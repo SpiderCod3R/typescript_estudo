@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Veiculo = /** @class */ (function () {
     function Veiculo() {
+        this.marca = '';
+        this.modelo = '';
         this.valor = 0;
         this.velocidade = 0;
     }

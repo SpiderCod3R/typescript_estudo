@@ -1,5 +1,3 @@
-
-
 export default class Pessoa {
   protected nome: string
   protected telefone: string
@@ -7,7 +5,6 @@ export default class Pessoa {
   constructor(nome: string, telefone: string) {
     this.nome=nome
     this.telefone = telefone
-    
   }
 
   public dizerNome(): string {

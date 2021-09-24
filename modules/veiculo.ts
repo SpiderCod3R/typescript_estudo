@@ -1,8 +1,8 @@
 export default class Veiculo {
-  protected marca: string
-  protected modelo: string
+  protected marca: string=''
+  protected modelo: string=''
   protected valor: number =0
-  private velocidade: number =0
+  protected velocidade: number =0
 
   public acelerar(): void {
     this.velocidade += 10

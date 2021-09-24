@@ -21,13 +21,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var veiculo_1 = __importDefault(require("./veiculo"));
 var Moto = /** @class */ (function (_super) {
     __extends(Moto, _super);
-    function Moto(marca, modelo, numero_de_portas, valor) {
-        var _this = _super.call(this) || this;
-        _this.marca = marca;
-        _this.modelo = modelo;
-        _this.valor = valor;
-        return _this;
+    function Moto() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
+    Moto.prototype.acelerar = function () {
+        this.velocidade += 20;
+    };
     return Moto;
 }(veiculo_1.default));
 exports.default = Moto;
