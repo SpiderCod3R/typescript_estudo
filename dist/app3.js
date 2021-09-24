@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var carro_1 = __importDefault(require("./modules/carro"));
+var consecionaria_1 = __importDefault(require("./modules/consecionaria"));
 var moto_1 = __importDefault(require("./modules/moto"));
 var carro = new carro_1.default('Porche', 'Verona', 2, 91109);
 carro.acelerar();
@@ -17,3 +18,5 @@ moto.acelerar();
 moto.acelerar();
 console.log(carro);
 console.log(moto);
+var concessionaria = new consecionaria_1.default('', []);
+console.log(concessionaria.fornecerHorariosDeFuncionamento());

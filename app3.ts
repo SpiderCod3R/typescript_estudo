@@ -1,4 +1,5 @@
 import Carro from "./modules/carro";
+import Concessionaria from "./modules/consecionaria";
 import Moto from "./modules/moto";
 
 let carro = new Carro('Porche', 'Verona', 2, 91_109)
@@ -15,3 +16,6 @@ moto.acelerar()
 
 console.log(carro)
 console.log(moto)
+
+let concessionaria = new Concessionaria('', [])
+console.log(concessionaria.fornecerHorariosDeFuncionamento())
