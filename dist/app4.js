@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var carro_dao_1 = require("./interfaces/carro_dao");
+var cliente_dao_1 = require("./interfaces/cliente_dao");
+var concessionaria_dao_1 = require("./interfaces/concessionaria_dao");
+var carro_1 = __importDefault(require("./modules/carro"));
+var cliente_1 = __importDefault(require("./modules/cliente"));
+var consecionaria_1 = __importDefault(require("./modules/consecionaria"));
+var consecionaria = new consecionaria_1.default('', []);
+var dao = new concessionaria_dao_1.ConsecionariaDAO();
+dao.inserir(consecionaria);
+var clienteDAO = new cliente_dao_1.ClienteDAO();
+var cliente = new cliente_1.default('', '', '');
+clienteDAO.atualizar(cliente);
+var carroDAO = new carro_dao_1.CarroDAO();
+var carroA = new carro_1.default('', '', 2, 0);
+carroDAO.selecionarTodos();

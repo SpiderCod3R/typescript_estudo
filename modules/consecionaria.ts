@@ -1,7 +1,6 @@
 import Carro from "./carro"
-import { ConsecionariaInterface } from "../interfaces/concessionaria_interface"
 
-export default class Concessionaria implements ConsecionariaInterface{
+export default class Concessionaria {
   private endereco: string
   private listaDeCarros: Array<Carro>
   
