@@ -1,7 +1,7 @@
 import { DaoInterface } from "./dao_interface";
 import Carro from "../modules/carro";
 
-export class CarroDAO implements DaoInterface {
+export class CarroDAO{
 
   nomeTabela: string = 'tb_carro'
 

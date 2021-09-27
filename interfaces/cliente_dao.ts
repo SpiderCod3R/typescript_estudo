@@ -1,7 +1,7 @@
 import Cliente from "../modules/cliente";
 import { DaoInterface } from "./dao_interface";
 
-export class ClienteDAO implements DaoInterface {
+export class ClienteDAO {
   nomeTabela: string = 'tb_cliente'
 
   inserir(object: Cliente): boolean {

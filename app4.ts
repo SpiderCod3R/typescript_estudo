@@ -1,21 +1,16 @@
-import { CarroDAO } from "./interfaces/carro_dao";
-import { ClienteDAO } from "./interfaces/cliente_dao";
-import { ConsecionariaDAO } from "./interfaces/concessionaria_dao";
+import { Dao } from "./dao";
 import Carro from "./modules/carro";
 import Cliente from "./modules/cliente";
 import Concessionaria from "./modules/consecionaria";
 
 let consecionaria = new Concessionaria('', [])
-let dao: ConsecionariaDAO = new ConsecionariaDAO()
 
-dao.inserir(consecionaria)
-
-let clienteDAO: ClienteDAO = new ClienteDAO()
 let cliente= new Cliente('', '', '')
 
-clienteDAO.atualizar(cliente)
-
-let carroDAO: CarroDAO = new CarroDAO()
 let carroA = new Carro('', '', 2, 0)
 
-carroDAO.selecionarTodos()
+let dao3: Dao<Concessionaria> = new Dao<Concessionaria>()
+let dao4: Dao<Cliente> = new Dao<Cliente>()
+
+dao3.inserir(consecionaria)
+dao4.remover(55)
